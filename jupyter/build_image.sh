@@ -1,7 +1,7 @@
 #!/bin/bash -e
 image_name="my-jupyter"
 image_tag="latest"
-full_image_name=${image_name}:${image_tag}
+full_image_name=172.17.198.145:5000/${image_name}:${image_tag}
 
 cd "$(dirname "$0")"
 docker build -t "${full_image_name}" .
